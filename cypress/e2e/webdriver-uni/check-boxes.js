@@ -2,10 +2,10 @@
 
 describe("Verify check-boxes for webdriver-uni", () => {
   beforeEach(() => {
-    cy.visit("https://webdriveruniversity.com");
-    cy.get("#dropdown-checkboxes-radiobuttons")
-      .invoke("removeAttr", "target")
-      .click({ force: true });
+    cy.navigateToWebDriverUniCheckBoxesPage();
+    // cy.get("#dropdown-checkboxes-radiobuttons")
+    //   .invoke("removeAttr", "target")
+    //   .click({ force: true });
   });
   it("Should allow to check check-box", () => {
     //cy.get("#checkboxes > :nth-child(1) > input").check().should("be.checked");

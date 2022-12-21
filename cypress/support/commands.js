@@ -22,7 +22,12 @@ Cypress.Commands.add("selectProduct", (productName) => {
     }
   });
 });
-
+Cypress.Commands.add("navigateToWebDriverUniBaseUrl", () => {
+  cy.visit("/");
+});
+Cypress.Commands.add("navigateToWebDriverUniCheckBoxesPage", () => {
+  cy.visit("/" + "/Dropdown-Checkboxes-RadioButtons/index.html");
+});
 Cypress.Commands.add("addProductToBasket", (productName) => {
   cy.get(".fixed_wrapper .prdocutname").each(($el, index) => {
     if ($el.text() === productName) {

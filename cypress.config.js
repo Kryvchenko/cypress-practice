@@ -7,12 +7,14 @@ module.exports = defineConfig({
     },
     specPattern: "cypress/e2e/**/*.{js, jsx, ts, tsx, feature}",
     excludeSpecPattern: "cypress/e2e/other/*.js",
+    baseUrl: "https://webdriveruniversity.com",
     chromeWebSecurity: false,
     experimentalSessionAndOrigin: true,
     defaultCommandTimeout: 10000,
     pageLoadTimeout: 120000,
     env: {
-      first_name: "Mia"
+      first_name: "Mia",
+      webdriver_uni_homepage: "https://webdriveruniversity.com"
     }
   }
 });
