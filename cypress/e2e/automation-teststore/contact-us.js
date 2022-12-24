@@ -2,6 +2,7 @@
 /// <reference types="cypress" />
 
 describe("Test contact us page via automation store", () => {
+  Cypress.config("defaultCommandTimeout", 20000);
   before(() => {
     cy.fixture("user-datails").as("user");
   });
