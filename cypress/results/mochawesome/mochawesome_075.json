@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-25T17:34:52.760Z",
+    "end": "2022-12-25T17:34:56.745Z",
+    "duration": 3985,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c081d0ea-bbfc-4ce6-81c1-eac2e234071e",
+      "title": "",
+      "fullFile": "cypress/e2e/automation-teststore/add-items-to-the-basket.js",
+      "file": "cypress/e2e/automation-teststore/add-items-to-the-basket.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3846b092-7380-4906-92e2-7e428581ee95",
+          "title": "Add multiple items to basket",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add specific item to basket",
+              "fullTitle": "Add multiple items to basket Add specific item to basket",
+              "timedOut": null,
+              "duration": 2779,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "autostore_haircarepage_PO.addHaircareProductsToBasket();\n/* Same logic but whithout abstraction and pom */\n// globalThis.data.productName.map((el) => cy.addProductToBasket(el));\n// cy.get(\".dropdown-toggle > .fa\").click();",
+              "err": {},
+              "uuid": "c263727a-e4a9-4b99-a622-fe9dfd676226",
+              "parentUUID": "3846b092-7380-4906-92e2-7e428581ee95",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c263727a-e4a9-4b99-a622-fe9dfd676226"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2779,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

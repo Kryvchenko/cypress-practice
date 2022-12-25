@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-25T17:32:23.155Z",
+    "end": "2022-12-25T17:32:27.695Z",
+    "duration": 4540,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2a89c5ff-4364-4e9f-9e59-bacc6d4be2d8",
+      "title": "",
+      "fullFile": "cypress/e2e/automation-teststore/variables-and-cy-commads.js",
+      "file": "cypress/e2e/automation-teststore/variables-and-cy-commads.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "574eae86-09a9-4287-9a97-8036f62e4377",
+          "title": "Verifying variables, cypress commands, and jquery commands",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Navigate to specific product pages",
+              "fullTitle": "Verifying variables, cypress commands, and jquery commands Navigate to specific product pages",
+              "timedOut": null,
+              "duration": 2504,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://automationteststore.com/\"); // This approach wan't work\n// const makeupLink = cy\n//   .get(\"a[href*='product/category&path=']\")\n//   .contains(\"Makeup\");\n// const skincareLink = cy\n//   .get(\"a[href*='product/category&path=']\")\n//   .contains(\"Skincare\");\n// makeupLink.click();\n// skincareLink.click();\n// This approach will work\ncy.get(\"a[href*='product/category&path=']\").contains(\"Makeup\").click();\ncy.get(\"a[href*='product/category&path=']\").contains(\"Skincare\").click();",
+              "err": {},
+              "uuid": "8bc98295-9713-4fdf-a992-b24e47067097",
+              "parentUUID": "574eae86-09a9-4287-9a97-8036f62e4377",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Navigate to specific product pages",
+              "fullTitle": "Verifying variables, cypress commands, and jquery commands Navigate to specific product pages",
+              "timedOut": null,
+              "duration": 690,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://automationteststore.com/\");\ncy.get(\"a[href*='product/category&path=']\").contains(\"Makeup\").click();\ncy.get(\"h1 .maintext\").then($headeText => {\n  const headerText = $headeText.text();\n  cy.log(`Found header text: ${headerText}`);\n  expect(headerText).is.eq(\"Makeup\");\n});",
+              "err": {},
+              "uuid": "d9ec64b1-2668-49db-9de0-39e9d2b745e8",
+              "parentUUID": "574eae86-09a9-4287-9a97-8036f62e4377",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Navigate to specific product pages",
+              "fullTitle": "Verifying variables, cypress commands, and jquery commands Navigate to specific product pages",
+              "timedOut": null,
+              "duration": 352,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://automationteststore.com/index.php?rt=content/contact\"); //cypress commands and chaining\ncy.contains(\"#ContactUsFrm\", \"Contact Us Form\").find(\"#field_11\").should(\"contain\", \"First name\"); //jquery approach\ncy.contains(\"#ContactUsFrm\", \"Contact Us Form\").then(text => {\n  const textField = text.find(\"#field_11\").text();\n  expect(textField).to.contain(\"First name\");\n}); //embedded commans (closure)\ncy.get(\"#field_11\").then(fnText => {\n  cy.log(fnText.text());\n  cy.log(fnText);\n});",
+              "err": {},
+              "uuid": "a7ceaed7-8fa8-4d1b-b8dc-9cdad14143f1",
+              "parentUUID": "574eae86-09a9-4287-9a97-8036f62e4377",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8bc98295-9713-4fdf-a992-b24e47067097",
+            "d9ec64b1-2668-49db-9de0-39e9d2b745e8",
+            "a7ceaed7-8fa8-4d1b-b8dc-9cdad14143f1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3546,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

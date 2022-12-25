@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-25T17:35:07.578Z",
+    "end": "2022-12-25T17:35:11.176Z",
+    "duration": 3598,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "562214c7-a6bd-4eb0-a29b-1fb53904a85b",
+      "title": "",
+      "fullFile": "cypress/e2e/automation-teststore/inspect-items.js",
+      "file": "cypress/e2e/automation-teststore/inspect-items.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "395501e7-f5d3-42e1-b11b-3faedf2cc3de",
+          "title": "Inspect automation store items with chaining commands",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able to select specific item",
+              "fullTitle": "Inspect automation store items with chaining commands should be able to select specific item",
+              "timedOut": null,
+              "duration": 2192,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://automationteststore.com/\");\ncy.get(\".prdocutname\").contains(\"Skinsheen Bronzer Stick\").click().then(function (itetHeaderText) {\n  console.log(`Selected the following item ${itetHeaderText.text()}`);\n});",
+              "err": {},
+              "uuid": "6277ca71-d9c8-4c51-9f40-486aa46f2c33",
+              "parentUUID": "395501e7-f5d3-42e1-b11b-3faedf2cc3de",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6277ca71-d9c8-4c51-9f40-486aa46f2c33"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2192,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

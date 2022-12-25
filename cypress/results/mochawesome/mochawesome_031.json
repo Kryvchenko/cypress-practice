@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-25T17:19:32.521Z",
+    "end": "2022-12-25T17:19:34.775Z",
+    "duration": 2254,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f0d28f5b-6f89-4897-9c87-78309d12128d",
+      "title": "",
+      "fullFile": "cypress/e2e/webdriver-uni/autocomplete-dropdown-list.js",
+      "file": "cypress/e2e/webdriver-uni/autocomplete-dropdown-list.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c3e3d065-b3c4-4781-9b1a-6c83666864f3",
+          "title": "Verify Autocomplete dropwdown lists via webdriveruni",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Select specific product via autocomplete list",
+              "fullTitle": "Verify Autocomplete dropwdown lists via webdriveruni Select specific product via autocomplete list",
+              "timedOut": null,
+              "duration": 1357,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://www.webdriveruniversity.com\");\ncy.get(\"#autocomplete-textfield\").invoke(\"removeAttr\", \"target\").click({\n  force: true\n});\ncy.get(\"#myInput\").type(\"A\");\ncy.get(\"#myInputautocomplete-list > *\").each(($el, index, $list) => {\n  const prod = $el.text();\n  const productToSelect = \"Avacado\";\n  if (prod === productToSelect) {\n    //$el.click();\n    $el.trigger(\"click\");\n    cy.get(\"#submit-button\").click();\n    cy.url().should(\"include\", productToSelect);\n  }\n}).then(() => {\n  cy.get(\"#myInput\").type(\"g\");\n  cy.get(\"#myInputautocomplete-list > *\").each(($el, index, $list) => {\n    const prod = $el.text();\n    const productToSelect = \"Grapes\";\n    if (prod === productToSelect) {\n      //$el.click();\n      $el.trigger(\"click\");\n      cy.get(\"#submit-button\").click();\n      cy.url().should(\"include\", productToSelect);\n    }\n  });\n});",
+              "err": {},
+              "uuid": "5b91d394-1842-4d41-a082-3ed53991aedd",
+              "parentUUID": "c3e3d065-b3c4-4781-9b1a-6c83666864f3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5b91d394-1842-4d41-a082-3ed53991aedd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1357,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

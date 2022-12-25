@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-25T17:19:44.246Z",
+    "end": "2022-12-25T17:19:46.021Z",
+    "duration": 1775,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ebd34798-8cc2-43e9-a02c-3e19c2b295d5",
+      "title": "",
+      "fullFile": "cypress/e2e/webdriver-uni/data-tables.js",
+      "file": "cypress/e2e/webdriver-uni/data-tables.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e097696a-d814-4377-bc01-22b14b3bfd94",
+          "title": "Handling data via webdriveruni",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Calculate and assert the total age of all users",
+              "fullTitle": "Handling data via webdriveruni Calculate and assert the total age of all users",
+              "timedOut": null,
+              "duration": 768,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const userDetails = [];\nlet numb = 0;\ncy.get(\"#thumbnail-1  td\").each(($el, index, $list) => {\n  userDetails[index] = $el.text();\n}).then(() => {\n  userDetails.map(el => {\n    if (Number(el)) {\n      numb += Number(el);\n    }\n  });\n  expect(numb).to.eq(322);\n});",
+              "err": {},
+              "uuid": "cc5e89bf-fbc1-4ce6-8f84-2892e0ca1078",
+              "parentUUID": "e097696a-d814-4377-bc01-22b14b3bfd94",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should be able to find user age with a last name",
+              "fullTitle": "Handling data via webdriveruni Should be able to find user age with a last name",
+              "timedOut": null,
+              "duration": 217,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#thumbnail-1  tr td:nth-child(2)\").each(($el, index, $list) => {\n  const text = $el.text();\n  if (text.includes(\"Woods\")) {\n    cy.get(\"#thumbnail-1  tr td:nth-child(2)\").eq(index).next().then(age => {\n      const userAge = age.text();\n      expect(userAge).to.eq(\"80\");\n    });\n  }\n});",
+              "err": {},
+              "uuid": "3460f5db-2558-4af9-b956-3d1588111092",
+              "parentUUID": "e097696a-d814-4377-bc01-22b14b3bfd94",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cc5e89bf-fbc1-4ce6-8f84-2892e0ca1078",
+            "3460f5db-2558-4af9-b956-3d1588111092"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 985,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
