@@ -6,6 +6,7 @@
   "scripts": {
     "triggerAllTests-webdriveruni": "npx cypress run --spec cypress/e2e/webdriver-uni/*",
     "triggerAllTests-autoTestStore": "npx cypress run --spec cypress/e2e/automation-teststore/*",
+    "triggerAllTests-dashboard": "npx cypress run --spec cypress/e2e/*/* --record --key 5a2871c2-de68-4833-94db-3a65731ba754",
     "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
     "delete-junit-report": "rm -rf cypress/results/junit/results.xml",
     "delete-results": "rm -rf cypress/results/* || true",
