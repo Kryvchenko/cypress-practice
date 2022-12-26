@@ -23,7 +23,8 @@ module.exports = defineConfig({
       return getConfigurationByFile(file);
     },
     specPattern: "cypress/e2e/**/*.{js, jsx, ts, tsx, feature}",
-    excludeSpecPattern: "cypress/e2e/other/*.js",
+    /* With exclude command you can choose which test or folder to omit */
+    //excludeSpecPattern: "cypress/e2e/other/*.js",
     baseUrl: "https://webdriveruniversity.com",
     chromeWebSecurity: false,
     experimentalSessionAndOrigin: true,
